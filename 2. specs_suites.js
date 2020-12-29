@@ -58,3 +58,21 @@ describe("calculator.js", function() {
 
 
 3. Expectations
+It is nothing but a statement that returns true or false.
+
+e.g expect 5 + 5 to be 10
+
+      expect(5+5).toBe(10); // way to write expectations
+      
+      expect takes input values from code side,
+      toBe contains expected output.
+      
+      
+      
+Spec with all true expectations => passing spec
+Spec with one or more false expectations => failing spec
+
+expect(10).toBe(10)  // true
+expect(10).toBe(9)   // false
+
+
