@@ -76,3 +76,40 @@ expect(10).toBe(10)  // true
 expect(10).toBe(9)   // false
 
 
+-----------------------------------------------------------------------------------------------------------------------------
+    VERY IMP:- Spec / suite that we will disable will be shown as pending status & will not be executed.
+    
+    How to disable suite/specs?
+        
+        suppose we have 5 test suites and we dont want to execute 3rd suite, in that case we can disable 3rd suit only.
+        or if we have 100 specs inside suite and we dont want to execute last 10 specs, in that case we can disable those specs also.
+        
+    we can add 'X' in front of describe to disable that suite.
+    
+    
+    disabling suite
+        All the specs within disable suite will be mark as pending.
+    
+    syntax:-
+        xdescribe("calculator.js", function() {   
+        // here nothing will get execute
+          it("title of spec", function() {
+            //...we need to write expectations here
+          })
+        })
+      
+      
+      
+      disabling spec
+        particular spec will not get execute in this case
+        
+      syntax:-
+        describe("calculator.js", function() {   
+          xit("title of spec", function() {
+            // here nothing will get execute
+          })
+          
+          it("title1 of spec", function() {
+            // it will execute
+          })
+        })
