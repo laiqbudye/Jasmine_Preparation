@@ -194,3 +194,14 @@ describe("calculator.js", function() {
   
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
+9. toContain()
+actual output should contain specific value.
+
+expect("HelloWorld").toContain("World");  //true, as HelloWorld contains World inside it.
+
+
+
+
+
+
+
