@@ -112,7 +112,22 @@ describe("calculator.js", function() {
   })
 })
 
+------------------------------------------------------------------------------------------------------------------------------------
+
+5. Negating Matchers (not)
+it acts like not opeator. it just negate the answer.
 
 
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+  expect('10').toBe(10)  // false, as type of 10 is not same
+  })
+})
 
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+  expect('10').not.toBe(10)  // true, it just negates the result of spec
+  })
+})
 
