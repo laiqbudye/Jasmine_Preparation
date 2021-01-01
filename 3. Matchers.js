@@ -200,8 +200,53 @@ actual output should contain specific value.
 expect("HelloWorld").toContain("World");  //true, as HelloWorld contains World inside it.
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10.toBeNaN()
+expects actual result as not a number.
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const b = "1";
+    expect(b * 2).toBeNaN();  // true
+  })
+})
 
 
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const b = 1;
+    expect(b * 2).toBeNaN();  // false
+  })
+})
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+11. anything()
+sometimes we dont know actual type of variable, in this case jasmine.anything() can be helpful.
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const b = "hello";
+    expect(b).toEqual(jasmine.anything());  // true
+  })
+})
+
+this returns false for undefined & null values
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const b = undefined;
+    expect(b).toEqual(jasmine.anything());  // false
+  })
+})
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const c = null;
+    expect(b).toEqual(jasmine.anything());  // false
+  })
+})
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
