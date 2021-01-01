@@ -131,3 +131,66 @@ describe("calculator.js", function() {
   })
 })
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+6. toBeDefined() 
+it expects the value to be deifined. i.e value should not be undefined
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const a = 10;
+    expect(a).toBeDefined();  // true
+  })
+})
+
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const b;
+    expect(b).toBeDefined();  // false
+  })
+})
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+  
+7. toBeUndefined()
+it expects the actual value to be undefined.
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const a = 10;
+    expect(a).toBeUndefined();  // false
+  })
+})
+
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const b;
+    expect(b).toBeUndefined();  // true
+  })
+})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ 
+8. toBeNull()
+it expects the actual value to be null.
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const a = null;
+    expect(a).toBeNull();  // true
+  })
+})
+
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+    const b;
+    expect(b).toBeNull();  // false
+  })
+})
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
