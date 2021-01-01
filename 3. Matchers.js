@@ -29,7 +29,7 @@ Matchers are as follows:-
   })
 })                                                                                  
                                                                                   
-               
+--------------------------------------------------------------------------------------------------------------------------------------------               
 
 2. toEqual()
 toEqual() is same as toBe() matcher, toEqual is use to compare objects. it does deep cheking.
@@ -66,6 +66,53 @@ toEqual() compares object keys & values with strict cheking.
 })
   
   
+---------------------------------------------------------------------------------------------------------------------------------------------------
+    
+3. toBeTruthy()
+a value that translates to true when evaluated in a boolean context.
+
+e.g
+if(15)  // true
+if({})  // true
+if('any sting')  // true
   
+ to check boolean value of any value just add !! in front of that value.
+ 
+ !!15  // true
+ !!{}   // true
+ !!"any string"  // true
+ 
+
+ describe("calculator.js", function() {   
+  it("title of spec", function() {
+  expect({value:'10'}).toBeTruthy()  // true, as it will translate to true in a boolean context 
+  expect(0).toBeTruthy()  // false
+  })
+})
+------------------------------------------------------------------------------------------------------------------------------------------
+
+4. toBeFalsy()
+a value that translates to false when evaluated in a boolean context.
+
+e.g
+if(0)  // false
+if(null)  // false
+if('')  // false
+  
+ to check boolean value of any value just add !! in front of that value.
+ 
+ !!null  // false
+ !!Nan   // false
+ !!""  // false
+
+describe("calculator.js", function() {   
+  it("title of spec", function() {
+  expect(0).toBeFalsy()  // true, as it will translate to true in a boolean context 
+  expect(1).toBeFalsy()  // false
+  })
+})
+
+
+
 
 
