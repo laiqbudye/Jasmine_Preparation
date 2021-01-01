@@ -29,6 +29,43 @@ Matchers are as follows:-
   })
 })                                                                                  
                                                                                   
-                                                                                   
+               
+
+2. toEqual()
+toEqual() is same as toBe() matcher, toEqual is use to compare objects. it does deep cheking.
+
+{} == {}  // it returns false as it compares memory references.
+
+ describe("calculator.js", function() {   
+  it("title of spec", function() {
+  expect({}).toBe({})  // false, as it is comparing memory references
+  })
+}) 
+  
+ 
+toEqual() compares object keys & values with strict cheking.
+
+  describe("calculator.js", function() {   
+  it("title of spec", function() {
+  expect({}).toEqual({})  // true
+  })
+})
+  
+
+  describe("calculator.js", function() {   
+  it("title of spec", function() {
+  expect({value:10}).toEqual({value:10})  // true
+  })
+})
+  
+
+  describe("calculator.js", function() {   
+  it("title of spec", function() {
+  expect({value:'10'}).toEqual({value:10})  // false, as it is expecting 10 as number... (toEqual does strict (===) comparison)
+  })
+})
+  
+  
+  
 
 
